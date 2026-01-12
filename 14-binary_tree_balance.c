@@ -3,14 +3,14 @@
 /**
  * binary_tree_height - finds the height
  * @tree: pointer
- * Return: -1 if tree is NULL
+ * Return: 0 if tree is NULL
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t left = -1, right = -1;
+	size_t left = 0, right = 0;
 
 	if (tree == NULL)
-		return (-1);
+		return (0);
 
 	if (tree->left != NULL)
 		left = binary_tree_height(tree->left);
@@ -42,5 +42,3 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	return (left_height - right_height);
 }
-
-
